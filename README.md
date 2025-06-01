@@ -91,7 +91,7 @@ Built for teams, students, and professionals handling fund-based projects (like 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/fundora.git
+git clone https://github.com/Harinee2501/Fundora.git
 cd trackaholic
 ```
 
