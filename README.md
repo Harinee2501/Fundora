@@ -1,6 +1,6 @@
-# 💾 Trackaholic – Fund Expense & Project Tracker
+# 💾 Fundora – Fund Expense & Project Tracker
 
-**Trackaholic** is a full-stack web application designed to help users manage project-based fund tracking, record expenses and incomes, upload receipts, and generate PDF/CSV reports — all in a visually intuitive dashboard.
+**Fundora** is a full-stack web application designed to help users manage project-based fund tracking, record expenses and incomes, upload receipts, and generate PDF/CSV reports — all in a visually intuitive dashboard.
 
 Built for teams, students, and professionals handling fund-based projects (like college clubs, events, or research groups), Trackaholic offers robust financial visibility, transparency, and ease of use.
 
@@ -91,7 +91,7 @@ Built for teams, students, and professionals handling fund-based projects (like 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/trackaholic.git
+git clone https://github.com/YOUR_USERNAME/fundora.git
 cd trackaholic
 ```
 
@@ -143,14 +143,6 @@ All backend routes are prefixed with: `/api/v1/`
 
 ---
 
-## 📸 Screenshots (Add if ready)
-
-| Dashboard                          | Add Expense                        | PDF Download                   |
-| ---------------------------------- | ---------------------------------- | ------------------------------ |
-| ![dashboard](assets/dashboard.png) | ![expense](assets/add-expense.png) | ![pdf](assets/pdf-preview.png) |
-
----
-
 ## 📌 .gitignore Highlights
 
 ```gitignore
@@ -177,19 +169,5 @@ Thumbs.db
 * [ ] Export full project summary as a zip
 * [ ] Admin analytics dashboard
 * [ ] Dark mode toggle 🌙
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-## 🙋‍♀️ Author
-
-**Harinee**
-Trackaholic was built as a comprehensive solution to simplify fund tracking for college events, personal projects, and team collaborations.
-Let's connect on [LinkedIn](https://linkedin.com/) or [GitHub](https://github.com/YOUR_USERNAME)
 
 ---
