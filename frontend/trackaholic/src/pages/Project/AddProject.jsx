@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+const baseUrl = import.meta.env.VITE_BACKEND_URL;
 
 const AddProject = () => {
   const [title, setTitle] = useState("");
