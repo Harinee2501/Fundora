@@ -18,10 +18,10 @@ export default function ProjectDashboard({ projectId }) {
     async function fetchData() {
       try {
         const [phasesRes, expensesRes] = await Promise.all([
-          axios.get(`http://localhost:8000/api/v1/projects/${projectId}/phases`, {
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}/phases`, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           }),
-          axios.get(`http://localhost:8000/api/v1/projects/${projectId}/expenses`, {
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}/expenses`, {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           }),
         ]);

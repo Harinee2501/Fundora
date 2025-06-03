@@ -22,20 +22,21 @@ const AddProject = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await axios.post(
-        "http://localhost:8000/api/v1/projects",
-        {
-          title,
-          fundingAmount,
-          funderName,
-          startDate,
-          endDate,
-          description,
-        },
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+const response = await axios.post(
+  `${baseUrl}/api/v1/projects`,
+  {
+    title,
+    fundingAmount,
+    funderName,
+    startDate,
+    endDate,
+    description,
+  },
+  {
+    headers: { Authorization: `Bearer ${token}` },
+  }
+);
+
 
       setSuccess("Project added successfully!");
       setError(null);

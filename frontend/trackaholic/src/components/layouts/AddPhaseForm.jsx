@@ -16,7 +16,7 @@ export default function AddPhaseForm({ projectId, onPhaseAdded }) {
     const fetchProject = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/v1/projects/${projectId}`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}`,
           {
             headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
           }
@@ -51,7 +51,7 @@ export default function AddPhaseForm({ projectId, onPhaseAdded }) {
     try {
       if (editIndex !== null) {
         const response = await axios.put(
-          `http://localhost:8000/api/v1/projects/${projectId}/phases/${editIndex}`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}/phases/${editIndex}`,
           {
             ...phaseData,
             amountReceived: parseFloat(phaseData.amountReceived),
@@ -69,7 +69,7 @@ export default function AddPhaseForm({ projectId, onPhaseAdded }) {
         if (onPhaseAdded) onPhaseAdded(response.data);
       } else {
         const response = await axios.post(
-          `http://localhost:8000/api/v1/projects/${projectId}/phases`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}/phases`,
           {
             ...phaseData,
             amountReceived: parseFloat(phaseData.amountReceived),
@@ -110,7 +110,7 @@ export default function AddPhaseForm({ projectId, onPhaseAdded }) {
 
     try {
       const response = await axios.delete(
-        `http://localhost:8000/api/v1/projects/${projectId}/phases/${index}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}/phases/${index}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

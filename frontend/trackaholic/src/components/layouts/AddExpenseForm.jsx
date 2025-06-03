@@ -16,7 +16,7 @@ export default function AddExpenseForm({ projectId }) {
   const fetchExpenses = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/v1/projects/${projectId}/expenses`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}/expenses`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -66,8 +66,8 @@ export default function AddExpenseForm({ projectId }) {
 
     try {
       const url = editId
-        ? `http://localhost:8000/api/v1/projects/${projectId}/expenses/${editId}`
-        : `http://localhost:8000/api/v1/projects/${projectId}/expenses`;
+        ? `${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}/expenses/${editId}`
+        : `${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}/expenses`;
 
       const method = editId ? axios.put : axios.post;
 
@@ -103,7 +103,7 @@ export default function AddExpenseForm({ projectId }) {
 
     try {
       const response = await axios.delete(
-        `http://localhost:8000/api/v1/projects/${projectId}/expenses/${id}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/projects/${projectId}/expenses/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -367,7 +367,7 @@ export default function AddExpenseForm({ projectId }) {
                   {exp.receiptUrl ? (
                     <>
                       <a
-                        href={`http://localhost:8000${exp.receiptUrl}`}
+                        href={`${import.meta.env.VITE_BACKEND_URL}${exp.receiptUrl}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ marginRight: "10px", color: "#5E3F2F", fontWeight: "600" }}
@@ -375,7 +375,7 @@ export default function AddExpenseForm({ projectId }) {
                         View
                       </a>
                       <a
-                        href={`http://localhost:8000${exp.receiptUrl}`}
+                        href={`${import.meta.env.VITE_BACKEND_URL}${exp.receiptUrl}`}
                         download
                         style={{ color: "#5E3F2F", fontWeight: "600" }}
                       >
@@ -384,7 +384,7 @@ export default function AddExpenseForm({ projectId }) {
                       {isImageFile(exp.receiptUrl) && (
                         <div>
                           <img
-                            src={`http://localhost:8000${exp.receiptUrl}`}
+                            src={`${import.meta.env.VITE_BACKEND_URL}${exp.receiptUrl}`}
                             alt="Receipt thumbnail"
                             style={styles.receiptImg}
                           />

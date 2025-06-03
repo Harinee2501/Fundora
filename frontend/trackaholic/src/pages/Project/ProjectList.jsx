@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const baseUrl = import.meta.env.VITE_BACKEND_URL;
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
@@ -14,9 +15,9 @@ const ProjectList = () => {
   const fetchProjects = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:8000/api/v1/projects", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+ const response = await axios.get(`${baseUrl}/api/v1/projects`, {
+  headers: { Authorization: `Bearer ${token}` },
+});
       setProjects(response.data);
     } catch (err) {
       setError(err.response?.data?.message || "Failed to load projects");
@@ -29,9 +30,9 @@ const ProjectList = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:8000/api/v1/projects/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+await axios.delete(`${baseUrl}/api/v1/projects/${id}`, {
+  headers: { Authorization: `Bearer ${token}` },
+});
       setProjects((prev) => prev.filter((proj) => proj._id !== id));
     } catch (err) {
       alert("Failed to delete project");

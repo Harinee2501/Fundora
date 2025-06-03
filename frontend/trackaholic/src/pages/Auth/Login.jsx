@@ -26,10 +26,10 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:8000/api/v1/auth/login", {
-        email,
-        password,
-      });
+const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/login`, {
+  email,
+  password,
+});
 
       // Save token or user info if needed
       localStorage.setItem("token", response.data.token);

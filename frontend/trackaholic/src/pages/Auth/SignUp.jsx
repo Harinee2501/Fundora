@@ -46,15 +46,16 @@ const SignUp = () => {
         formData.append("profilePic", profilePic); // Must match Multer's field name
       }
 
-      const response = await axios.post(
-        "http://localhost:8000/api/v1/auth/register",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+ const response = await axios.post(
+  `${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/register`,
+  formData,
+  {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  }
+);
+
 
       if (response.data.success) {
         // Redirect to login page
