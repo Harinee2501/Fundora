@@ -51,7 +51,7 @@ Built for teams, students, and professionals handling fund-based projects (like 
 * jsPDF + html2canvas + react-csv
 * Tailwind CSS
 
-### ⚖Backend – Node.js + Express
+### Backend – Node.js + Express
 
 * MongoDB (via Mongoose)
 * JWT for authentication
