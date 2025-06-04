@@ -1,4 +1,4 @@
-#  Fundora – Fund Expense & Project Tracker
+#  Fundora - Project Fund tracker for students
 
 **Fundora** is a full-stack web application designed to help users manage project-based fund tracking, record expenses and incomes, upload receipts, and generate PDF/CSV reports — all in a visually intuitive dashboard.
 
@@ -41,7 +41,7 @@ Built for teams, students, and professionals handling fund-based projects (like 
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 ### Frontend – Vite + React
 
