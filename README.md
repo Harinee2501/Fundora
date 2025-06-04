@@ -1,4 +1,4 @@
-# 💾 Fundora – Fund Expense & Project Tracker
+#  Fundora – Fund Expense & Project Tracker
 
 **Fundora** is a full-stack web application designed to help users manage project-based fund tracking, record expenses and incomes, upload receipts, and generate PDF/CSV reports — all in a visually intuitive dashboard.
 
@@ -6,30 +6,30 @@ Built for teams, students, and professionals handling fund-based projects (like 
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🔐 Authentication
+### Authentication
 
 * User registration and login with JWT token-based authentication
 * Role-based access protection (e.g., project members vs creators)
 
-### 📁 Project Management
+### Project Management
 
 * Create, update, and delete projects
 * Assign multiple phases and track them individually
 
-### 💸 Expense & Income Tracking
+### Expense & Income Tracking
 
 * Add, edit, delete expenses/incomes tied to specific projects and phases
 * Upload receipts (image or PDF)
 * Categorize and filter by date, phase, or type
 
-### 📤 Receipt Handling
+### Receipt Handling
 
 * Upload receipts via forms
 * Securely download them when needed
 
-### 📊 Dashboards & Reports
+### Dashboards & Reports
 
 * View fund balance, total spent, and income per project
 * Export project reports as **PDF** or **CSV** using:
@@ -43,7 +43,7 @@ Built for teams, students, and professionals handling fund-based projects (like 
 
 ## 🧱 Tech Stack
 
-### 💽 Frontend – Vite + React
+### Frontend – Vite + React
 
 * React Router DOM
 * Axios
@@ -51,20 +51,20 @@ Built for teams, students, and professionals handling fund-based projects (like 
 * jsPDF + html2canvas + react-csv
 * Tailwind CSS
 
-### ⚖️ Backend – Node.js + Express
+### ⚖Backend – Node.js + Express
 
 * MongoDB (via Mongoose)
 * JWT for authentication
 * Multer for file uploads
 * RESTful API design
 
-### 🗄️ Database
+### Database
 
 * MongoDB Atlas
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 
 ```
 /frontend/trackaholic/
@@ -86,7 +86,7 @@ Built for teams, students, and professionals handling fund-based projects (like 
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -126,7 +126,7 @@ npm run dev
 
 ---
 
-## 📦 API Routes
+## API Routes
 
 All backend routes are prefixed with: `/api/v1/`
 
@@ -143,7 +143,7 @@ All backend routes are prefixed with: `/api/v1/`
 
 ---
 
-## 📌 .gitignore Highlights
+## .gitignore Highlights
 
 ```gitignore
 # Frontend
@@ -163,11 +163,11 @@ Thumbs.db
 
 ---
 
-## 📌 To-Do / Future Enhancements
+## To-Do / Future Enhancements
 
 * [ ] Add email verification
 * [ ] Export full project summary as a zip
 * [ ] Admin analytics dashboard
-* [ ] Dark mode toggle 🌙
+* [ ] Dark mode toggle 
 
 ---
