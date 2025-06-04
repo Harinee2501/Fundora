@@ -75,7 +75,7 @@ Built for teams, students, and professionals handling fund-based projects (like 
 │   └── utils/
 └── public/
 
-📆 Backend
+ Backend
 /backend/
 ├── routes/
 ├── controllers/
